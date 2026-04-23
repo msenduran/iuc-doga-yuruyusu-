@@ -2,6 +2,51 @@
 
 İstanbul Üniversitesi-Cerrahpaşa Doğa Yürüyüşü Topluluğu'nun tanıtım ve etkinlik web sitesi.
 
+## Prerequisites
+
+Projeyi çalıştırmak için aşağıdakilerden birini kur:
+
+### Python 3 (önerilen)
+
+**macOS / Linux:**
+```bash
+# Kontrol et (genellikle yüklü gelir)
+python3 --version
+
+# Yüklü değilse — Ubuntu/Debian
+sudo apt install python3
+
+# macOS (Homebrew ile)
+brew install python3
+```
+
+**Windows:**
+- [python.org](https://www.python.org/downloads/) adresinden indir ve kur
+- Kurulum sırasında **"Add Python to PATH"** kutusunu işaretle
+
+---
+
+### Node.js (alternatif)
+
+**macOS / Linux:**
+```bash
+# Ubuntu/Debian
+sudo apt install nodejs npm
+
+# macOS (Homebrew)
+brew install node
+```
+
+**Windows:**
+- [nodejs.org](https://nodejs.org/) adresinden LTS sürümünü indir ve kur
+
+`http-server` paketini global yükle:
+```bash
+npm install -g http-server
+```
+
+---
+
 ## Teknolojiler
 
 - HTML5
@@ -38,15 +83,17 @@ iuc-doga-yuruyusu/
 │   ├── main.js
 │   ├── components.js
 │   └── bootstrap.bundle.min.js
-├── assets/
-│   └── img/
-└── report/
-    ├── design-report.html
-    ├── screenshots/
-    └── wireframes/
+└── assets/
+    └── img/
 ```
 
 ## Çalıştırma
+
+Repoyu klonla:
+```bash
+git clone https://github.com/msenduran/iuc-doga-yuruyusu-.git
+cd iuc-doga-yuruyusu-
+```
 
 ### Python ile (önerilen)
 
@@ -56,15 +103,27 @@ python3 -m http.server 8080
 
 Tarayıcıda `http://localhost:8080` adresini aç.
 
-### Local ağdan erişim
-
-Aynı Wi-Fi ağındaki cihazlardan erişmek için:
+### Node.js ile
 
 ```bash
-python3 -m http.server 8080
+http-server -p 8080
 ```
 
-Ardından `http://<bilgisayarın-IP-adresi>:8080` adresini kullan.
+Tarayıcıda `http://localhost:8080` adresini aç.
+
+### Local ağdan erişim (mobil / diğer cihazlar)
+
+Aynı Wi-Fi ağındaki cihazlardan erişmek için önce IP adresini öğren:
+
+```bash
+# Linux / macOS
+hostname -I
+
+# Windows
+ipconfig
+```
+
+Ardından sunucuyu başlat ve mobil cihazdan `http://<IP-adresi>:8080` adresini aç.
 
 ## Özellikler
 
