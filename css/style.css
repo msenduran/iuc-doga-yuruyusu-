@@ -1,0 +1,345 @@
+/* ================================================
+   İÜC Doğa Yürüyüşü Topluluğu - Ana Stil Dosyası
+   ================================================ */
+
+/* ---------- CSS Değişkenleri ---------- */
+:root {
+  --color-primary:   #2d6a4f;
+  --color-secondary: #52b788;
+  --color-accent:    #95d5b2;
+  --color-earth:     #774936;
+  --color-light-bg:  #f0f7f4;
+  --color-dark:      #1b4332;
+  --color-text:      #2d3a2e;
+  --font-main:       'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- Genel ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: #fff;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-dark);
+}
+
+/* ================================================
+   ÖZEL CSS SINIFLARI (Ödev Gereksinimi)
+   ================================================ */
+
+/* 1. hero-nature */
+.hero-nature {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-nature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/img/sunset-nature.jpg') center/cover no-repeat;
+  opacity: 0.25;
+}
+
+.hero-nature .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-nature h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-nature p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  opacity: 0.9;
+}
+
+/* 2. section-title-custom */
+.section-title-custom {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title-custom::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* 3. trail-card */
+.trail-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.trail-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(45,106,79,0.18);
+}
+
+.trail-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.trail-card .card-body {
+  padding: 1.25rem;
+}
+
+/* 4. event-badge-custom */
+.event-badge-custom {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.event-badge-custom.level-kolay    { background: #d8f3dc; color: #1b4332; }
+.event-badge-custom.level-orta     { background: #fff3cd; color: #7d4e00; }
+.event-badge-custom.level-zor      { background: #fde8e8; color: #7d0000; }
+
+/* 5. gallery-overlay-custom */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.gallery-overlay-custom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(27,67,50,0.85) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.gallery-item:hover .gallery-overlay-custom,
+.gallery-item:focus-within .gallery-overlay-custom {
+  opacity: 1;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+  transform: scale(1.06);
+}
+
+/* Always visible on touch devices */
+@media (hover: none) {
+  .gallery-overlay-custom { opacity: 1; }
+  .gallery-item img        { transform: none !important; }
+}
+
+/* 6. club-stat-box */
+.club-stat-box {
+  background: var(--color-light-bg);
+  border-left: 5px solid var(--color-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.club-stat-box:hover {
+  background: var(--color-accent);
+}
+
+.club-stat-box .stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.club-stat-box .stat-label {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+/* 7. footer-links-custom */
+.footer-links-custom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-custom li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links-custom a {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.footer-links-custom a:hover {
+  color: #fff;
+  padding-left: 6px;
+}
+
+/* ================================================
+   NAVBAR
+   ================================================ */
+.navbar-brand-custom {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff !important;
+  letter-spacing: 0.3px;
+}
+
+.navbar-brand-custom span {
+  color: var(--color-accent);
+}
+
+.nav-link-custom {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  background: rgba(255,255,255,0.12);
+  color: #fff !important;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+footer {
+  background: var(--color-dark);
+  color: #cde8d8;
+}
+
+footer h6 {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-divider {
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ================================================
+   YARDIMCI SINIFLAR
+   ================================================ */
+.bg-nature    { background-color: var(--color-light-bg); }
+.text-nature  { color: var(--color-primary) !important; }
+.btn-nature {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.btn-nature:hover {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: #fff;
+}
+
+.section-padding { padding: 80px 0; }
+
+/* ================================================
+   KAROUSELl — responsive yükseklik
+   ================================================ */
+.carousel-img {
+  height: 420px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ================================================
+   SAYFA BANNER (events/gallery/about/contact)
+   ================================================ */
+.page-banner {
+  padding: 4rem 0;
+}
+@media (max-width: 768px) { .page-banner { padding: 2.5rem 0; } }
+@media (max-width: 576px) { .page-banner { padding: 1.75rem 0; } }
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+/* --- Tablet (≤768px) --- */
+@media (max-width: 768px) {
+  .hero-nature              { min-height: 70vh; }
+  .hero-nature h1           { font-size: 2rem; }
+  .section-padding          { padding: 50px 0; }
+  .club-stat-box            { margin-bottom: 1rem; }
+  .gallery-item img         { height: 160px; }
+  .section-title-custom     { font-size: 1.6rem; }
+  .trail-card .card-img-top { height: 180px; }
+  .carousel-img             { height: 260px; }
+}
+
+/* --- Küçük telefon (≤576px) --- */
+@media (max-width: 576px) {
+  .hero-nature              { min-height: 60vh; }
+  .hero-nature h1           { font-size: 1.6rem; }
+  .hero-nature p            { font-size: 0.95rem; }
+  .section-padding          { padding: 36px 0; }
+  .club-stat-box .stat-number { font-size: 2rem; }
+  .gallery-item img         { height: 130px; }
+  .section-title-custom     { font-size: 1.35rem; }
+  .trail-card .card-img-top { height: 160px; }
+  .navbar-brand-custom      { font-size: 0.95rem; }
+  .carousel-img             { height: 200px; }
+  /* Prevent hero buttons from overflowing */
+  .hero-nature .btn         { font-size: 0.9rem; padding: 0.5rem 1.25rem; }
+}

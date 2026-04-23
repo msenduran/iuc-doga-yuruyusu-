@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri | İÜC Doğa Yürüyüşü Topluluğu</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Özel Stil -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <div id="navbar-placeholder"></div>
+  <!-- ====== SAYFA BAŞLIĞI ====== -->
+  <section class="page-banner text-center text-white" style="background: linear-gradient(135deg, var(--color-dark), var(--color-primary));">
+    <div class="container">
+      <h1 class="fw-bold mb-2">Galeri</h1>
+      <p class="opacity-75">Yürüyüşlerimizden en güzel kareler.</p>
+    </div>
+  </section>
+
+  <!-- ====== KATEGORİ FİLTRE ====== -->
+  <section class="py-3 bg-nature border-bottom">
+    <div class="container d-flex flex-wrap gap-2 justify-content-center">
+      <button class="btn btn-nature btn-sm rounded-pill px-3">Tümü</button>
+      <button class="btn btn-outline-success btn-sm rounded-pill px-3">Dağ</button>
+      <button class="btn btn-outline-success btn-sm rounded-pill px-3">Orman</button>
+      <button class="btn btn-outline-success btn-sm rounded-pill px-3">Göl</button>
+      <button class="btn btn-outline-success btn-sm rounded-pill px-3">Kamp</button>
+      <button class="btn btn-outline-success btn-sm rounded-pill px-3">Ekip</button>
+    </div>
+  </section>
+
+  <!-- ====== GALERİ IZGARASI ====== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-3">
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/uludag-summit.jpg"
+               data-img-title="Uludağ Zirvesi – Mart 2026">
+            <img src="assets/img/uludag-summit.jpg" alt="Uludağ" />
+            <div class="gallery-overlay-custom">Uludağ Zirvesi</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/aerial-forest.jpg"
+               data-img-title="Belgrad Ormanı – Nisan 2026">
+            <img src="assets/img/aerial-forest.jpg" alt="Belgrad" />
+            <div class="gallery-overlay-custom">Belgrad Ormanı</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/abant-misty.jpg"
+               data-img-title="Abant Gölü – Şubat 2026">
+            <img src="assets/img/abant-misty.jpg" alt="Abant" />
+            <div class="gallery-overlay-custom">Abant Gölü</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/mountain-peak.jpg"
+               data-img-title="Kaçkar Dağları – Temmuz 2025">
+            <img src="assets/img/mountain-peak.jpg" alt="Kaçkar" />
+            <div class="gallery-overlay-custom">Kaçkar Dağları</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/forest-trail.jpg"
+               data-img-title="Orman Yolu – Ekim 2025">
+            <img src="assets/img/forest-trail.jpg" alt="Orman" />
+            <div class="gallery-overlay-custom">Orman Yolu</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/abant-misty.jpg"
+               data-img-title="Göl Yürüyüşü – Ocak 2026">
+            <img src="assets/img/abant-misty.jpg" alt="Göl" />
+            <div class="gallery-overlay-custom">Göl Yürüyüşü</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/sapanca-lake.jpg"
+               data-img-title="Sapanca – Kasım 2025">
+            <img src="assets/img/sapanca-lake.jpg" alt="Sapanca" />
+            <div class="gallery-overlay-custom">Sapanca</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/karagol.jpg"
+               data-img-title="Artvin Karagöl – Ağustos 2025">
+            <img src="assets/img/karagol.jpg" alt="Karagöl" />
+            <div class="gallery-overlay-custom">Artvin Karagöl</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/hiking-trail.jpg"
+               data-img-title="Zirvede Ekip – Eylül 2025">
+            <img src="assets/img/hiking-trail.jpg" alt="Ekip" />
+            <div class="gallery-overlay-custom">Zirvede Ekip</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/sunset-nature.jpg"
+               data-img-title="Gün Batımı – Aralık 2025">
+            <img src="assets/img/sunset-nature.jpg" alt="Gün batımı" />
+            <div class="gallery-overlay-custom">Gün Batımı</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/camp-fire.jpg"
+               data-img-title="Kamp Gecesi – Ağustos 2025">
+            <img src="assets/img/camp-fire.jpg" alt="Kamp" />
+            <div class="gallery-overlay-custom">Kamp Gecesi</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+               data-img-src="assets/img/mountain-flowers.jpg"
+               data-img-title="Dağ Çiçekleri – Mayıs 2025">
+            <img src="assets/img/mountain-flowers.jpg" alt="Çiçekler" />
+            <div class="gallery-overlay-custom">Dağ Çiçekleri</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LIGHTBOX MODAL ====== -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0 pb-0">
+          <h6 class="modal-title text-white" id="lightboxTitle"></h6>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center p-2">
+          <img id="lightboxImg" src="" class="img-fluid rounded" style="max-height:80vh;" alt="Galeri" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

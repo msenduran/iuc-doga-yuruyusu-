@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etkinlikler | İÜC Doğa Yürüyüşü Topluluğu</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Özel Stil -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <div id="navbar-placeholder"></div>
+  <!-- ====== SAYFA BAŞLIĞI ====== -->
+  <section class="page-banner text-center text-white" style="background: linear-gradient(135deg, var(--color-dark), var(--color-primary));">
+    <div class="container">
+      <h1 class="fw-bold mb-2">Etkinlikler</h1>
+      <p class="opacity-75">Yaklaşan ve geçmiş doğa yürüyüşlerimizi keşfet.</p>
+    </div>
+  </section>
+
+  <!-- ====== FİLTRE FORMU ====== -->
+  <section class="py-4 bg-nature border-bottom">
+    <div class="container">
+      <form class="row g-3 align-items-end" aria-label="Etkinlik filtresi">
+        <div class="col-6 col-md-3">
+          <label class="form-label fw-semibold small" for="filterZorluk">Zorluk Seviyesi</label>
+          <select class="form-select" id="filterZorluk">
+            <option value="">Tümü</option>
+            <option>Kolay</option>
+            <option>Orta</option>
+            <option>Zor</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-3">
+          <label class="form-label fw-semibold small" for="filterAy">Ay</label>
+          <select class="form-select" id="filterAy">
+            <option value="">Tüm Aylar</option>
+            <option>Mayıs 2026</option>
+            <option>Haziran 2026</option>
+            <option>Temmuz 2026</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-md-3 d-flex flex-column justify-content-end">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chkKonaklamali" />
+            <label class="form-check-label" for="chkKonaklamali">Sadece Konaklamalı</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chkUcretsiz" />
+            <label class="form-check-label" for="chkUcretsiz">Ücretsiz Etkinlikler</label>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <button type="submit" class="btn btn-nature w-100">
+            <i class="bi bi-funnel me-1"></i>Filtrele
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== ETKİNLİK KARTLARI ====== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/hiking-trail.jpg"
+                 class="card-img-top" alt="Uludağ" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-orta">Orta</span>
+                <span class="badge bg-success">Kayıt Açık</span>
+              </div>
+              <h5 class="card-title">Uludağ Doğa Yürüyüşü</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>11 Mayıs 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>Bursa</p>
+              <p class="card-text text-muted small flex-grow-1">12 km parkur, 800m yükseklik farkı.</p>
+              <button class="btn btn-nature mt-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#eventModal1">
+                Detay & Başvur
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/forest-trail.jpg"
+                 class="card-img-top" alt="Belgrad Ormanı" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-kolay">Kolay</span>
+                <span class="badge bg-success">Kayıt Açık</span>
+              </div>
+              <h5 class="card-title">Belgrad Ormanı Turu</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>18 Mayıs 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>İstanbul</p>
+              <p class="card-text text-muted small flex-grow-1">7 km, düz parkur. Başlangıç seviyesi için ideal.</p>
+              <button class="btn btn-nature mt-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#eventModal2">
+                Detay & Başvur
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/mountain-peak.jpg"
+                 class="card-img-top" alt="Kaçkar" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-zor">Zor</span>
+                <span class="badge bg-warning text-dark">Dolmak Üzere</span>
+              </div>
+              <h5 class="card-title">Kaçkar Zirve Kampı</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>1-3 Haziran 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>Rize</p>
+              <p class="card-text text-muted small flex-grow-1">3 günlük kamp ve zirve tırmanışı.</p>
+              <button class="btn btn-nature mt-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#eventModal3">
+                Detay & Başvur
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/abant-misty.jpg"
+                 class="card-img-top" alt="Abant Gölü" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-kolay">Kolay</span>
+                <span class="badge bg-success">Kayıt Açık</span>
+              </div>
+              <h5 class="card-title">Abant Gölü Yürüyüşü</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>15 Haziran 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>Bolu</p>
+              <p class="card-text text-muted small flex-grow-1">Göl çevresi 6 km. Huzurlu sabah yürüyüşü.</p>
+              <button class="btn btn-nature mt-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#eventModal1">
+                Detay & Başvur
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/sapanca-lake.jpg"
+                 class="card-img-top" alt="Sapanca" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-orta">Orta</span>
+                <span class="badge bg-secondary">Yakında</span>
+              </div>
+              <h5 class="card-title">Sapanca Orman Turu</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>29 Haziran 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>Sakarya</p>
+              <p class="card-text text-muted small flex-grow-1">Göl kenarında 10 km fotoğraf yürüyüşü.</p>
+              <button class="btn btn-outline-secondary mt-3 rounded-pill" disabled>Kayıt Henüz Açılmadı</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/karagol.jpg"
+                 class="card-img-top" alt="Karagöl" />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="event-badge-custom level-zor">Zor</span>
+                <span class="badge bg-secondary">Yakında</span>
+              </div>
+              <h5 class="card-title">Karagöl-Sahara Milli Parkı</h5>
+              <p class="small text-muted"><i class="bi bi-calendar3 me-1"></i>13 Temmuz 2026</p>
+              <p class="small text-muted"><i class="bi bi-geo-alt me-1"></i>Artvin</p>
+              <p class="card-text text-muted small flex-grow-1">Doğu Karadeniz'in saklı cenneti, 3 günlük tur.</p>
+              <button class="btn btn-outline-secondary mt-3 rounded-pill" disabled>Kayıt Henüz Açılmadı</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MODAL: Etkinlik 1 ====== -->
+  <div class="modal fade" id="eventModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background:var(--color-dark); color:#fff;">
+          <h5 class="modal-title"><i class="bi bi-map me-2"></i>Uludağ Doğa Yürüyüşü</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="assets/img/hiking-trail.jpg"
+                   class="img-fluid rounded" alt="Uludağ" />
+            </div>
+            <div class="col-md-6">
+              <p><strong>Tarih:</strong> 11 Mayıs 2026, 07:00</p>
+              <p><strong>Mesafe:</strong> 12 km</p>
+              <p><strong>Süre:</strong> ~5 saat</p>
+              <p><strong>Yükseklik Farkı:</strong> 800 m</p>
+              <p><strong>Buluşma:</strong> Bursa Otobüs Terminali</p>
+              <p><strong>Kontenjan:</strong> 25 kişi</p>
+              <p><strong>Ücret:</strong> 150 ₺ (ulaşım dahil)</p>
+            </div>
+          </div>
+          <hr />
+          <h6 class="fw-bold">Hızlı Başvuru</h6>
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Adınız Soyadınız" />
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz" />
+            </div>
+          </div>
+          <div class="mt-3">
+            <p class="mb-1 small fw-semibold">Deneyim seviyeniz:</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp1" id="r1a" />
+              <label class="form-check-label" for="r1a">Yeni Başlayan</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp1" id="r1b" />
+              <label class="form-check-label" for="r1b">Orta</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp1" id="r1c" />
+              <label class="form-check-label" for="r1c">İleri</label>
+            </div>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="chkKVKK1" />
+            <label class="form-check-label small" for="chkKVKK1">KVKK onayı veriyorum.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          <button class="btn btn-nature rounded-pill px-4"><i class="bi bi-check-circle me-1"></i>Başvur</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MODAL: Etkinlik 2 ====== -->
+  <div class="modal fade" id="eventModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background:var(--color-dark); color:#fff;">
+          <h5 class="modal-title"><i class="bi bi-map me-2"></i>Belgrad Ormanı Turu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="assets/img/forest-trail.jpg"
+                   class="img-fluid rounded" alt="Belgrad" />
+            </div>
+            <div class="col-md-6">
+              <p><strong>Tarih:</strong> 18 Mayıs 2026, 09:00</p>
+              <p><strong>Mesafe:</strong> 7 km</p>
+              <p><strong>Buluşma:</strong> Bahçeköy Metro İstasyonu</p>
+              <p><strong>Kontenjan:</strong> 40 kişi</p>
+              <p><strong>Ücret:</strong> Ücretsiz</p>
+            </div>
+          </div>
+          <hr />
+          <h6 class="fw-bold">Hızlı Başvuru</h6>
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Adınız Soyadınız" />
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz" />
+            </div>
+          </div>
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" id="chkKVKK2" />
+            <label class="form-check-label small" for="chkKVKK2">KVKK onayı veriyorum.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          <button class="btn btn-nature rounded-pill px-4"><i class="bi bi-check-circle me-1"></i>Başvur</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MODAL: Etkinlik 3 ====== -->
+  <div class="modal fade" id="eventModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background:var(--color-dark); color:#fff;">
+          <h5 class="modal-title"><i class="bi bi-map me-2"></i>Kaçkar Zirve Kampı</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="assets/img/mountain-peak.jpg"
+                   class="img-fluid rounded" alt="Kaçkar" />
+            </div>
+            <div class="col-md-6">
+              <p><strong>Tarih:</strong> 1-3 Haziran 2026</p>
+              <p><strong>Mesafe:</strong> 28 km (3 gün)</p>
+              <p><strong>Zirve:</strong> 3.937 m</p>
+              <p><strong>Kontenjan:</strong> 15 kişi</p>
+              <p><strong>Ücret:</strong> 650 ₺</p>
+            </div>
+          </div>
+          <hr />
+          <h6 class="fw-bold">Hızlı Başvuru</h6>
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Adınız Soyadınız" />
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control" placeholder="Telefon numaranız" />
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp3" id="r3a" />
+              <label class="form-check-label" for="r3a">Orta</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp3" id="r3b" />
+              <label class="form-check-label" for="r3b">İleri</label>
+            </div>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="chkKVKK3" />
+            <label class="form-check-label small" for="chkKVKK3">KVKK onayı veriyorum.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          <button class="btn btn-nature rounded-pill px-4"><i class="bi bi-check-circle me-1"></i>Başvur</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

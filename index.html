@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Sayfa | İÜC Doğa Yürüyüşü Topluluğu</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Özel Stil -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== SPINNER (sayfa yüklenirken) ====== -->
+  <div id="pageSpinner" class="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-white" style="z-index:9999;">
+    <div class="spinner-border text-success" role="status" style="width:3rem;height:3rem;">
+      <span class="visually-hidden">Yükleniyor...</span>
+    </div>
+  </div>
+
+  <!-- ====== NAVBAR ====== -->
+  <div id="navbar-placeholder"></div>
+  <!-- ====== HERO ====== -->
+  <section class="hero-nature">
+    <div class="hero-content container">
+      <p class="mb-2 text-uppercase fw-semibold" style="letter-spacing:2px; color: var(--color-accent);">
+        İstanbul Üniversitesi-Cerrahpaşa
+      </p>
+      <h1>Doğayla Buluş,<br>Kendini Keşfet</h1>
+      <p class="my-3 col-lg-6 mx-auto">
+        İÜC Doğa Yürüyüşü Topluluğu ile her hafta yeni bir parkurda, harika bir ekiple yürüyüş yap.
+      </p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="events.html" class="btn btn-nature btn-lg px-4 rounded-pill">
+          <i class="bi bi-calendar-event me-2"></i>Etkinliklere Katıl
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+          <i class="bi bi-person-plus me-2"></i>Üye Ol
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DUYURU ALERT ====== -->
+  <div class="container mt-4">
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="bi bi-megaphone-fill me-2 fs-5"></i>
+      <div>
+        <strong>Yeni Etkinlik!</strong> 11 Mayıs 2026 – Uludağ Doğa Yürüyüşü başvuruları açıldı.
+        <a href="events.html" class="alert-link ms-1">Hemen başvur →</a>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  </div>
+
+  <!-- ====== İSTATİSTİKLER ====== -->
+  <section class="section-padding bg-nature">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="club-stat-box h-100">
+            <div class="stat-number">240+</div>
+            <div class="stat-label">Aktif Üye</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="club-stat-box h-100">
+            <div class="stat-number">86</div>
+            <div class="stat-label">Tamamlanan Etkinlik</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="club-stat-box h-100">
+            <div class="stat-number">34</div>
+            <div class="stat-label">Farklı Parkur</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="club-stat-box h-100">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Yıllık Deneyim</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ÖNE ÇIKAN ETKİNLİKLER (Kartlar) ====== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title-custom">Yaklaşan Etkinlikler</h2>
+        <p class="text-muted mt-3">Her hafta sonu yeni bir macera seni bekliyor.</p>
+      </div>
+      <div class="row g-4">
+
+        <!-- Kart 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/hiking-trail.jpg"
+                 class="card-img-top" alt="Uludağ Yürüyüşü" />
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="event-badge-custom level-orta">Orta Seviye</span>
+                <span class="badge bg-secondary ms-1">11 May 2026</span>
+              </div>
+              <h5 class="card-title">Uludağ Doğa Yürüyüşü</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Bursa'nın zirvesinde nefes kesen manzaralar eşliğinde 12 km'lik bir parkur.
+              </p>
+              <a href="events.html" class="btn btn-nature mt-3 rounded-pill">Detaylar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kart 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/forest-trail.jpg"
+                 class="card-img-top" alt="Belgrad Ormanı" />
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="event-badge-custom level-kolay">Kolay</span>
+                <span class="badge bg-secondary ms-1">18 May 2026</span>
+              </div>
+              <h5 class="card-title">Belgrad Ormanı Turu</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                İstanbul'un akciğerlerinde sakin ve dinlendirici 7 km'lik yürüyüş parkuru.
+              </p>
+              <a href="events.html" class="btn btn-nature mt-3 rounded-pill">Detaylar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kart 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="trail-card card h-100">
+            <img src="assets/img/mountain-peak.jpg"
+                 class="card-img-top" alt="Kaçkar Dağları" />
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="event-badge-custom level-zor">Zor</span>
+                <span class="badge bg-secondary ms-1">1 Haz 2026</span>
+              </div>
+              <h5 class="card-title">Kaçkar Zirve Kampı</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                3 günlük kamp ve zirve tırmanışı. Deneyimli yürüyüşçüler için özel organizasyon.
+              </p>
+              <a href="events.html" class="btn btn-nature mt-3 rounded-pill">Detaylar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-5">
+        <a href="events.html" class="btn btn-outline-success rounded-pill px-5">
+          Tüm Etkinlikleri Gör <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== KAROUSELl (Galeri Önizleme) ====== -->
+  <section class="section-padding bg-nature">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title-custom">Anılardan Kareler</h2>
+      </div>
+      <div id="homeCarousel" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/uludag-summit.jpg"
+                 class="carousel-img d-block" alt="Dağ manzarası" />
+            <div class="carousel-caption">
+              <h5>Uludağ Zirvesi</h5>
+              <p>Mart 2026</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/aerial-forest.jpg"
+                 class="carousel-img d-block" alt="Orman yürüyüşü" />
+            <div class="carousel-caption">
+              <h5>Belgrad Ormanı</h5>
+              <p>Nisan 2026</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/abant-misty.jpg"
+                 class="carousel-img d-block" alt="Göl manzarası" />
+            <div class="carousel-caption">
+              <h5>Abant Gölü</h5>
+              <p>Şubat 2026</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <div id="footer-placeholder"></div>
+  <!-- Bootstrap 5 JS -->
+    <script src="js/components.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Özel JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

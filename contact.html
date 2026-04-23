@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim & Başvuru | İÜC Doğa Yürüyüşü Topluluğu</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Özel Stil -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <div id="navbar-placeholder"></div>
+  <!-- ====== SAYFA BAŞLIĞI ====== -->
+  <section class="page-banner text-center text-white" style="background: linear-gradient(135deg, var(--color-dark), var(--color-primary));">
+    <div class="container">
+      <h1 class="fw-bold mb-2">İletişim & Başvuru</h1>
+      <p class="opacity-75">Bize ulaş veya topluluğumuza katıl.</p>
+    </div>
+  </section>
+
+  <!-- ====== İÇERİK ====== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- SOL: Üyelik Başvuru Formu -->
+        <div class="col-lg-7">
+          <h2 class="section-title-custom mb-4">Üyelik Başvurusu</h2>
+
+          <div id="applySuccess" class="alert alert-success d-none" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Başvurunuz alındı! En kısa sürede sizinle iletişime geçeceğiz.
+          </div>
+
+          <form id="applyForm" novalidate>
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Ad Soyad <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" placeholder="Adınız ve soyadınız" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Öğrenci Numarası <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" placeholder="Örn: 2021040001" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">E-posta <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" placeholder="ornek@ogr.iuc.edu.tr" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Telefon</label>
+                <input type="tel" class="form-control" placeholder="05xx xxx xx xx" />
+              </div>
+
+              <!-- Select: Fakülte -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Fakülte <span class="text-danger">*</span></label>
+                <select class="form-select" required>
+                  <option value="">Fakültenizi seçin</option>
+                  <option>Mühendislik Fakültesi</option>
+                  <option>Tıp Fakültesi</option>
+                  <option>İşletme Fakültesi</option>
+                  <option>Fen-Edebiyat Fakültesi</option>
+                  <option>Hukuk Fakültesi</option>
+                  <option>Sağlık Bilimleri Fakültesi</option>
+                  <option>Diğer</option>
+                </select>
+              </div>
+
+              <!-- Select: Sınıf -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Sınıf <span class="text-danger">*</span></label>
+                <select class="form-select" required>
+                  <option value="">Seçiniz</option>
+                  <option>1. Sınıf</option>
+                  <option>2. Sınıf</option>
+                  <option>3. Sınıf</option>
+                  <option>4. Sınıf</option>
+                  <option>Yüksek Lisans</option>
+                  <option>Doktora</option>
+                </select>
+              </div>
+
+              <!-- Radio: Deneyim -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">Yürüyüş Deneyiminiz <span class="text-danger">*</span></label>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="experience" id="expYeni" value="yeni" required />
+                    <label class="form-check-label" for="expYeni">Yeni Başlayan</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="experience" id="expOrta" value="orta" />
+                    <label class="form-check-label" for="expOrta">Orta Seviye</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="experience" id="expIleri" value="ileri" />
+                    <label class="form-check-label" for="expIleri">İleri Seviye</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checkbox: İlgi Alanları -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">İlgilendiğiniz Aktiviteler</label>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="intYuruyus" />
+                    <label class="form-check-label" for="intYuruyus">Doğa Yürüyüşü</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="intKamp" />
+                    <label class="form-check-label" for="intKamp">Kamp</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="intFoto" />
+                    <label class="form-check-label" for="intFoto">Doğa Fotoğrafçılığı</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="intKus" />
+                    <label class="form-check-label" for="intKus">Kuş Gözlemi</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold">Kendinizi Kısaca Tanıtın</label>
+                <textarea class="form-control" rows="4" placeholder="Neden katılmak istiyorsunuz?"></textarea>
+              </div>
+
+              <!-- Checkbox: KVKK -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="kvkk" required />
+                  <label class="form-check-label small" for="kvkk">
+                    <strong>KVKK Onayı:</strong> Kişisel verilerimin üyelik amacıyla işlenmesine onay veriyorum.
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-nature btn-lg rounded-pill px-5">
+                  <i class="bi bi-send-fill me-2"></i>Başvuruyu Gönder
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- SAĞ: İletişim Bilgileri + Hızlı Mesaj -->
+        <div class="col-lg-5">
+
+          <div class="bg-nature rounded-4 p-4 mb-4">
+            <h5 class="fw-bold text-nature mb-3">İletişim Bilgileri</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-envelope-fill text-success me-2"></i>dogayuruyusu@iuc.edu.tr</li>
+              <li class="mb-2"><i class="bi bi-instagram text-success me-2"></i>@iucdogayuruyusu</li>
+              <li class="mb-2"><i class="bi bi-twitter-x text-success me-2"></i>@iucdoga</li>
+              <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i>Avcılar Kampüsü, Öğrenci Kulüpleri Binası, Kat 2</li>
+              <li class="mb-2"><i class="bi bi-clock-fill text-success me-2"></i>Toplantılar: Her Çarşamba 18:00</li>
+            </ul>
+          </div>
+
+          <div class="border rounded-4 p-4">
+            <h5 class="fw-bold mb-3">Hızlı Mesaj Gönder</h5>
+
+            <div id="formSuccess" class="alert alert-success d-none" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>Mesajınız iletildi, teşekkürler!
+            </div>
+
+            <form id="contactForm">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Adınız" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="E-posta adresiniz" required />
+              </div>
+              <!-- Select: Konu -->
+              <div class="mb-3">
+                <select class="form-select">
+                  <option value="">Konu seçin</option>
+                  <option>Üyelik Hakkında</option>
+                  <option>Etkinlik Sorusu</option>
+                  <option>Sponsor / İşbirliği</option>
+                  <option>Diğer</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Mesajınızı yazın..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-nature w-100 rounded-pill">
+                <i class="bi bi-send me-2"></i>Gönder
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

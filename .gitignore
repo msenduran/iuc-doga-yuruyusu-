@@ -1,0 +1,22 @@
+# Claude Code IDE settings
+.claude/
+
+# Project documentation (not source code)
+report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
